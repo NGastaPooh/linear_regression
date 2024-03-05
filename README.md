@@ -1,4 +1,4 @@
-# Ising model: Revengeance
+# Logistic regression
 
 <p align="center">
   <img align="top" src="/convergence.gif" width="300" /> 
@@ -6,18 +6,13 @@
 
 ## Description
 
-The goal of this project is to visualize the evolution of 2D ferromagnetic [Ising model][1] at given temperature with no external field. Assuming that each site in a 2D system is labeled with a pair of indices $` \left(k, k'\right) `$ and has a value $` \sigma_{kk'} = \{ +1, -1 \} `$, then the corresponding Hamiltonian of the system is:  
+The goal is to learn about linear regression as a part of Machine Learning toolkit. I follow Stanford CS229 lectures. This project consists of three parts:
 
-$$
-H(\sigma) = - \sum_{\langle ij, lm\rangle} \sigma_{ij} \sigma_{lm} , 
-$$  
+- fit 1D training data using Gradient Descent algortyhm and Newton's algorythm
+- Newton's algorythm to cover multidimentional traning data for a rgression task
+- classification task with a defferent dataset 
+[Ising model][1]  
 
-where the sum is over pairs of adjacent spins (every pair is counted once). The notation $\langle ij, lm\rangle$ indicates that the sites 
-$(i, j)$ and $(l, m)$ are nearest neighbors.  
-
-The system is propagated according to [Metropolis Monte-Carlo algorithm][2].
-
-As an additional feature, this particular realization of Ising model can recreate an image of Jetstream Sam (use $T = 1.69$), a character from a video game called [Metal Gear Rising: Revengeance][3], as if it was a natural equilibrium state of Ising model, by using a processed image as a reference.
 
 ## Model parameters
 
