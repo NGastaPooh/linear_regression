@@ -95,9 +95,9 @@ def main():
     def animate(n):
         y_gradient = theta_grad_animation[n][0] + theta_grad_animation[n][1] * x
         y_newton = theta_newton_animation[n][0] + theta_newton_animation[n][1] * x
-        line_gradient, = ax.plot(x, y_gradient, '.r', markersize=9)
-        line_newton, = ax.plot(x, y_newton, 'sg', markersize=3)
-        return line_gradient, line_newton,
+        line_newton, = ax.plot(x, y_newton, 'sg', markersize=4)
+        line_gradient, = ax.plot(x, y_gradient, '.r', markersize=6)
+        return line_newton, line_gradient,
 
     # animate system evolution with 400 ms delay between frames
     animate = animation.FuncAnimation(fig, animate, frames=newton_steps,
